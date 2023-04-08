@@ -1,6 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:learning/shared/components/navigate.dart';
+
+import '../settings/settings_screen.dart';
 
 class MessengerScreen extends StatelessWidget {
   const MessengerScreen({Key? key}) : super(key: key);
@@ -35,7 +38,9 @@ class MessengerScreen extends StatelessWidget {
         ),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+
+            },
             icon: CircleAvatar(
               backgroundColor: Colors.grey[800],
               child: Icon(
@@ -46,7 +51,9 @@ class MessengerScreen extends StatelessWidget {
             ),
           ),
           IconButton(
-              onPressed: () {},
+              onPressed: () {
+                navigateTo(context, const SettingsScreen());
+              },
               icon: CircleAvatar(
                 backgroundColor: Colors.grey[800],
                 child: Icon(

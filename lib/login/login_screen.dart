@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 import '../shared/components/components.dart';
+import '../shared/components/default_buttons.dart';
 
 class LoginScreen extends StatefulWidget {
+  const LoginScreen({Key? key}) : super(key: key);
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();
@@ -30,7 +31,7 @@ class _LoginScreenState extends State<LoginScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   'Login',
                   style: TextStyle(
                     fontSize: 40,
@@ -38,7 +39,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
                   ),
                 ),
-                SizedBox(height: 30,),
+                const SizedBox(height: 30,),
                 // TextFormField(
                 //   controller: emailController,
                 //   keyboardType: TextInputType.emailAddress,
@@ -68,16 +69,13 @@ class _LoginScreenState extends State<LoginScreen> {
                     type: TextInputType.emailAddress,
                     label: 'Email adress',
                     prefixIcn: Icons.email,
-                    onChang: (value){
-                      print(value);
-                    },
                     validate: (value){
                       if(value.isEmpty){
                         return 'Email must not be empty ';
                       }
                       return null;
                 }),
-                SizedBox(height: 20,),
+                const SizedBox(height: 20,),
                 // TextFormField(
                 //   controller: passwordController,
                 //   obscureText: true,
@@ -120,7 +118,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       }
                       return null;
                     },),
-                SizedBox(height: 30,),
+                const SizedBox(height: 30,),
                 defaultButton(function: (){
                   if(formKey.currentState!.validate()){
                     print(emailController.text);
@@ -129,17 +127,17 @@ class _LoginScreenState extends State<LoginScreen> {
                 },
                   textData: 'login',
                 ),
-                SizedBox(height: 50,),
+                const SizedBox(height: 50,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
+                    const Text(
                       'Don\'t have an account ?',
                     ),
-                    SizedBox(width: 5,),
+                    const SizedBox(width: 5,),
                     TextButton(
                       onPressed: (){},
-                      child: Text(
+                      child: const Text(
                       'Register now',
                       style: TextStyle(
                         color: Colors.blue,
